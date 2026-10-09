@@ -1,0 +1,149 @@
+{
+  "project": "LeaveHRAlone (PolicyPilot AI)",
+  "encoder": "o200k_base",
+  "task_2_sample_counts": [
+    {
+      "sample_name": "Sample 1: Short Employee Query",
+      "character_count": 72,
+      "word_count": 14,
+      "token_count": 15,
+      "text_preview": "How many paid annual leaves am I entitled to in India per calendar year?"
+    },
+    {
+      "sample_name": "Sample 2: HR Policy Section / Paragraph",
+      "character_count": 506,
+      "word_count": 88,
+      "token_count": 102,
+      "text_preview": "Employees in India are entitled to 24 paid annual leaves per calendar year, accrued monthly at the rate of 2 days per co..."
+    },
+    {
+      "sample_name": "Sample 3: Full PRD Document (Project Corpus)",
+      "character_count": 21345,
+      "word_count": 2684,
+      "token_count": 4404,
+      "text_preview": "PolicyPilot AIAI-Powered HR Policy & Benefits Assistant\nDocument Type: Product Requirements Document\nVersion: 1.0\nStatus..."
+    }
+  ],
+  "task_3_cost_estimation": {
+    "single_query_simulation": {
+      "input_tokens": 1117,
+      "output_tokens": 250,
+      "model_costs": {
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "description": "OpenAI GPT-4o (Default RAG Generator)",
+          "input_tokens": 1117,
+          "output_tokens": 250,
+          "total_tokens": 1367,
+          "input_cost_usd": 0.002792,
+          "output_cost_usd": 0.0025,
+          "total_cost_usd": 0.005293
+        },
+        "gpt-4o-mini": {
+          "model": "gpt-4o-mini",
+          "description": "OpenAI GPT-4o-mini (Cost-Optimized RAG)",
+          "input_tokens": 1117,
+          "output_tokens": 250,
+          "total_tokens": 1367,
+          "input_cost_usd": 0.000168,
+          "output_cost_usd": 0.00015,
+          "total_cost_usd": 0.000318
+        },
+        "claude-3-5-sonnet": {
+          "model": "claude-3-5-sonnet",
+          "description": "Anthropic Claude 3.5 Sonnet",
+          "input_tokens": 1117,
+          "output_tokens": 250,
+          "total_tokens": 1367,
+          "input_cost_usd": 0.003351,
+          "output_cost_usd": 0.00375,
+          "total_cost_usd": 0.007101
+        }
+      }
+    },
+    "scale_10k_monthly_queries": {
+      "total_input_tokens": 11170000,
+      "total_output_tokens": 2500000,
+      "model_costs": {
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "description": "OpenAI GPT-4o (Default RAG Generator)",
+          "input_tokens": 11170000,
+          "output_tokens": 2500000,
+          "total_tokens": 13670000,
+          "input_cost_usd": 27.925,
+          "output_cost_usd": 25.0,
+          "total_cost_usd": 52.925
+        },
+        "gpt-4o-mini": {
+          "model": "gpt-4o-mini",
+          "description": "OpenAI GPT-4o-mini (Cost-Optimized RAG)",
+          "input_tokens": 11170000,
+          "output_tokens": 2500000,
+          "total_tokens": 13670000,
+          "input_cost_usd": 1.6755,
+          "output_cost_usd": 1.5,
+          "total_cost_usd": 3.1755
+        },
+        "claude-3-5-sonnet": {
+          "model": "claude-3-5-sonnet",
+          "description": "Anthropic Claude 3.5 Sonnet",
+          "input_tokens": 11170000,
+          "output_tokens": 2500000,
+          "total_tokens": 13670000,
+          "input_cost_usd": 33.51,
+          "output_cost_usd": 37.5,
+          "total_cost_usd": 71.01
+        }
+      }
+    },
+    "vector_embedding_indexing": {
+      "model": "text-embedding-3-small",
+      "description": "OpenAI Text Embedding 3 Small (Vector Database Indexing)",
+      "input_tokens": 500000,
+      "output_tokens": 0,
+      "total_tokens": 500000,
+      "input_cost_usd": 0.01,
+      "output_cost_usd": 0.0,
+      "total_cost_usd": 0.01
+    }
+  },
+  "task_4_length_token_relationship": [
+    {
+      "category": "Plain English Text",
+      "sample_text": "Employees can request remote work approval up to two days per week with manager consent.",
+      "character_count": 88,
+      "word_count": 15,
+      "token_count": 16,
+      "chars_per_token": 5.5,
+      "tokens_per_word": 1.07
+    },
+    {
+      "category": "Structured Code / JSON Payload",
+      "sample_text": "{\"user_id\": \"usr_9981\", \"region\": \"India\", \"roles\": [\"EMPLOYEE\", \"HR_ADMIN\"], \"metadata\": {\"active\": true}}",
+      "character_count": 107,
+      "word_count": 10,
+      "token_count": 35,
+      "chars_per_token": 3.06,
+      "tokens_per_word": 3.5
+    },
+    {
+      "category": "Technical & Legal Policy Clauses",
+      "sample_text": "Sub-clause (iv)(b): Under Sec 4.2.1(B)-2026, non-exempt FTEs receiving $75,000.00/yr must comply with Rule #109-A.",
+      "character_count": 114,
+      "word_count": 14,
+      "token_count": 44,
+      "chars_per_token": 2.59,
+      "tokens_per_word": 3.14
+    },
+    {
+      "category": "Non-English / Multilingual Text (Hindi)",
+      "sample_text": "\u0915\u0930\u094d\u092e\u091a\u093e\u0930\u0940 \u092a\u094d\u0930\u0924\u094d\u092f\u0947\u0915 \u0915\u0948\u0932\u0947\u0902\u0921\u0930 \u0935\u0930\u094d\u0937 \u092e\u0947\u0902 24 \u0935\u0948\u0924\u0928\u093f\u0915 \u0935\u093e\u0930\u094d\u0937\u093f\u0915 \u091b\u0941\u091f\u094d\u091f\u093f\u092f\u094b\u0902 \u0915\u0947 \u0939\u0915\u0926\u093e\u0930 \u0939\u0948\u0902\u0964",
+      "character_count": 76,
+      "word_count": 12,
+      "token_count": 26,
+      "chars_per_token": 2.92,
+      "tokens_per_word": 2.17
+    }
+  ]
+}
