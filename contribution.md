@@ -1,43 +1,15 @@
-| Date & Module |
-| - |
-| 05-10-2026, Monday — 3.10 — Suhani |
-| 06-10-2026, Tuesday — 3.11 — Saanvi |
-| 07-10-2026, Wednesday — 3.12 — Harshita |
-| 08-10-2026, Thursday — 3.13 — Suhani |
-| 09-10-2026, Friday — 3.14 — Saanvi |
-| 12-10-2026, Monday — 3.15 — Harshita |
-| 13-10-2026, Tuesday — 3.16 — Suhani |
-| 14-10-2026, Wednesday — 3.17 — Saanvi |
-| 15-10-2026, Thursday — 3.18 — Harshita |
-| 16-10-2026, Friday — 3.19 — Suhani |
-| 19-10-2026, Monday — 3.20 — Saanvi |
-| 20-10-2026, Tuesday — 3.21 — Harshita |
-| 21-10-2026, Wednesday — 3.22 — Suhani |
-| 22-10-2026, Thursday — 3.23 — Saanvi |
-| 23-10-2026, Friday — 3.24 — Harshita |
-| 26-10-2026, Monday — 3.25 — Suhani |
-| 27-10-2026, Tuesday — 3.26 — Saanvi |
-| 28-10-2026, Wednesday — 3.27 — Harshita |
-| 29-10-2026, Thursday — 3.28 — Suhani |
-| 30-10-2026, Friday — 3.29 — Saanvi |
-| 02-11-2026, Monday — 3.30 — Harshita |
-| 03-11-2026, Tuesday — 3.31 — Suhani |
-| 04-11-2026, Wednesday — 3.32 — Saanvi |
-| 05-11-2026, Thursday — 3.33 — Harshita |
-| 06-11-2026, Friday — 3.34 — Suhani |
-| 09-11-2026, Monday — 3.35 — Saanvi |
-| 10-11-2026, Tuesday — 3.36 — Harshita |
-| 11-11-2026, Wednesday — 3.37 — Suhani |
-| 12-11-2026, Thursday — 3.38 — Saanvi |
-| 13-11-2026, Friday — 3.39 — Harshita |
-| 16-11-2026, Monday — 3.40 — Suhani |
-| 17-11-2026, Tuesday — 3.41 — Saanvi |
-| 18-11-2026, Wednesday — 3.42 — Harshita |
-| 19-11-2026, Thursday — 3.43 — Suhani |
-| 20-11-2026, Friday — 3.44 — Saanvi |
-| 23-11-2026, Monday — 3.45 — Harshita |
-| 24-11-2026, Tuesday — 3.46 — Suhani |
-| 25-11-2026, Wednesday — 3.47 — Saanvi |
-| 26-11-2026, Thursday — 3.48 — Harshita |
-| 27-11-2026, Friday — 3.49 — Suhani |
-| 30-11-2026, Monday — 3.50 — Saanvi |
+Date	Day	Suhani	Saanvi	Harshita
+05-10-2026	Monday	3.10	3.11	3.12
+06-10-2026	Tuesday	3.13	3.14	3.15
+07-10-2026	Wednesday	3.16	3.17	3.18
+08-10-2026	Thursday	3.19	3.20	3.21
+09-10-2026	Friday	3.22	3.23	3.24
+12-10-2026	Monday	3.25	3.26	3.27
+13-10-2026	Tuesday	3.28	3.29	3.30
+14-10-2026	Wednesday	3.31	3.32	3.33
+15-10-2026	Thursday	3.34	3.35	3.36
+16-10-2026	Friday	3.37	3.38	3.39
+19-10-2026	Monday	3.40	3.41	3.42
+20-10-2026	Tuesday	3.43	3.44	3.45
+21-10-2026	Wednesday	3.46	3.47	3.48
+22-10-2026	Thursday	3.49	3.50	—
