@@ -1,0 +1,26 @@
+# India Leave Policy 2026 (v2.0)
+Document Version: 2026.1
+Effective Date: 2026-01-01
+Region: India
+Category: Leave
+
+## 1.0 Overview & Scope
+This policy applies to all regular, full-time employees based in India offices (Bengaluru, Mumbai, Gurugram) and remote workers with India employment contracts.
+
+## 2.0 Annual Paid Leave (Privilege Leave)
+2.1 All full-time employees in India are entitled to 24 annual paid leaves per calendar year (accrued at 2 days per completed month of service).
+2.2 Annual leave must be requested at least 3 business days in advance via the HR self-service portal for requests exceeding 2 consecutive days.
+2.3 A maximum of 10 unused annual paid leaves may be carried forward into the subsequent calendar year. Any unused balance beyond 10 days will lapse automatically on December 31st without cash encashment.
+
+## 3.0 Sick & Casual Leave
+3.1 Employees receive 12 days of paid Sick and Casual Leave per year, credited on January 1st of each calendar year.
+3.2 Sick leave exceeding 3 consecutive days requires a registered medical practitioner's certificate upon return to work.
+3.3 Unused Sick and Casual Leave cannot be carried forward to the following year and cannot be encashed.
+
+## 4.0 Parental & Maternity Leave
+4.1 In accordance with the Maternity Benefit Act, female employees are entitled to 26 weeks of fully paid maternity leave for up to two surviving children.
+4.2 Male employees are entitled to 2 weeks (10 working days) of fully paid paternity leave, which must be taken within 6 months of the child's birth or legal adoption.
+4.3 Adoption leave of 12 weeks is provided for female employees adopting a child under three months of age.
+
+## 5.0 Bereavement & Compassionate Leave
+5.1 Employees are eligible for up to 5 consecutive working days of paid bereavement leave in the event of the loss of an immediate family member (parent, spouse, child, or sibling).

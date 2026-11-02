@@ -1,0 +1,25 @@
+# United States Employee Handbook 2026
+Document Version: 2026.1
+Effective Date: 2026-01-01
+Region: US
+Category: Workplace Policies
+
+## 1.0 Introduction & Employment At-Will
+This handbook sets forth the policies, benefits, and workplace standards for employees residing and working in the United States. Employment is at-will.
+
+## 2.0 Paid Time Off (PTO) & Federal Holidays
+2.1 Full-time US employees receive 15 days of Paid Time Off (PTO) per year, accrued at 1.25 days per month of service.
+2.2 The company observes 10 official US Federal Holidays: New Year's Day, Martin Luther King Jr. Day, Presidents' Day, Memorial Day, Juneteenth, Independence Day, Labor Day, Thanksgiving Day, Day after Thanksgiving, and Christmas Day.
+2.3 US employees can carry over a maximum of 5 unused PTO days into the following calendar year. Any additional accrued PTO must be utilized by December 31st.
+
+## 3.0 Healthcare & Dental Benefits
+3.1 The company offers comprehensive medical, dental, and vision coverage through Blue Cross Blue Shield.
+3.2 Employees may choose between a PPO plan and a High Deductible Health Plan (HDHP) with Health Savings Account (HSA) contribution matching up to $1,000 annually.
+3.3 Dependent coverage is available for legal spouses and children up to age 26.
+
+## 4.0 401(k) Retirement Savings Plan
+4.1 Eligible US employees may participate in the 401(k) retirement savings plan starting on their first day of employment.
+4.2 The company provides a 100% dollar-for-dollar match on employee contributions up to 4% of eligible base salary. Company matching funds vest immediately at 100%.
+
+## 5.0 Family and Medical Leave (FMLA)
+5.1 In accordance with federal law, eligible employees with at least 12 months of service who have worked 1,250 hours are eligible for up to 12 weeks of unpaid, job-protected FMLA leave per 12-month period.

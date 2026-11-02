@@ -1,0 +1,21 @@
+# Global Code of Conduct & Workplace Ethics 2026
+Document Version: 2026.1
+Effective Date: 2026-01-01
+Region: Global
+Category: Workplace Policies
+
+## 1.0 Global Applicability
+This Code of Conduct applies globally to all employees, contractors, executives, and directors across all operational regions (India, United States, United Kingdom, Singapore, and remote locations worldwide).
+
+## 2.0 Equal Opportunity & Anti-Harassment
+2.1 PolicyPilot AI operates an absolute zero-tolerance policy towards any form of harassment, discrimination, bullying, or retaliation based on race, gender, religion, sexual orientation, disability, or age.
+2.2 All employees have the right to a respectful and psychologically safe workplace environment.
+2.3 Any instance of discriminatory conduct will result in immediate disciplinary review up to and including termination of employment.
+
+## 3.0 Confidentiality & Data Protection
+3.1 Employees must strictly safeguard company proprietary information, intellectual property, customer records, and employee personal data in compliance with GDPR, HIPAA, and relevant data privacy legislation.
+3.2 Customer data and internal policies must never be input into unauthorized third-party generative AI tools without explicit prior approval from the Chief Information Security Officer (CISO).
+
+## 4.0 Whistleblower Protection
+4.1 The company provides a confidential, anonymous reporting hotline (whistleblower@policypilot.internal) for reporting ethical violations, fraud, or policy breaches.
+4.2 Retaliation of any kind against an employee who reports a concern in good faith is strictly prohibited by law and company policy.

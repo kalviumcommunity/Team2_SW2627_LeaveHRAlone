@@ -1,0 +1,16 @@
+# India Leave Policy 2025 (v1.0 - Superseded)
+Document Version: 2025.1
+Effective Date: 2025-01-01
+Expiration Date: 2025-12-31
+Region: India
+Category: Leave
+
+## 1.0 Overview
+This was the 2025 leave policy applicable to India employees. This version is obsolete and replaced by Version 2026.1.
+
+## 2.0 Annual Leave
+2.1 Full-time employees were entitled to 18 annual paid leaves per calendar year.
+2.2 A maximum of 5 unused annual paid leaves could be carried forward into the subsequent calendar year.
+
+## 3.0 Sick Leave
+3.1 Employees received 10 days of paid sick leave per year.

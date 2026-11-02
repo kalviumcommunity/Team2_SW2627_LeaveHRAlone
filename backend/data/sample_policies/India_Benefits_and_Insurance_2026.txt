@@ -1,0 +1,23 @@
+# India Benefits & Health Insurance Policy 2026
+Document Version: 2026.1
+Effective Date: 2026-01-01
+Region: India
+Category: Benefits & Insurance
+
+## 1.0 Group Medical Insurance (GMC)
+1.1 All regular full-time employees are covered under the company Group Medical Insurance plan from day one of employment.
+1.2 Coverage details:
+- Sum insured: ₹5,00,000 (Five Lakhs INR) family floater per policy year.
+- Covered dependents: Employee, legal spouse, up to 2 dependent children (up to age 25), and dependent parents or parent-in-laws.
+- Pre-existing conditions are covered from day one without waiting period.
+- Maternity coverage under GMC is capped at ₹75,000 for normal delivery and ₹1,00,000 for caesarean section.
+
+## 2.0 Outpatient Department (OPD) & Dental Benefit
+2.1 Employees can claim reimbursement for OPD consultations, diagnostic tests, and prescribed dental care up to ₹15,000 per financial year upon submitting verified tax invoices.
+
+## 3.0 Annual Wellness Stipend
+3.1 Each employee in India is allocated an annual wellness allowance of ₹20,000, claimable for gym memberships, fitness trackers, mental wellness sessions, or ergonomically certified home office furniture.
+
+## 4.0 Life and Personal Accident Insurance
+4.1 Group Term Life (GTL) insurance provides coverage equivalent to 3x of annual CTC.
+4.2 Group Personal Accident (GPA) coverage provides 2x of annual CTC in the event of accidental permanent disability or loss of life.
