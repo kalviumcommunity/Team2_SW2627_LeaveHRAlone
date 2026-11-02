@@ -1,0 +1,117 @@
+[
+  {
+    "id": "eval-01",
+    "type": "standard",
+    "question": "How many days of annual paid leave are employees in India entitled to?",
+    "region": "India",
+    "expected_document": "India Leave Policy",
+    "expected_section": "Annual Leave",
+    "expected_keywords": ["24", "annual", "paid leave"],
+    "should_answer": true
+  },
+  {
+    "id": "eval-02",
+    "type": "follow_up",
+    "question": "Can I carry them forward to the next calendar year?",
+    "history": [
+      {"role": "user", "content": "How many days of annual leave do I get?"},
+      {"role": "assistant", "content": "Employees in India receive 24 days of annual leave per year."}
+    ],
+    "region": "India",
+    "expected_document": "India Leave Policy",
+    "expected_section": "Carry Forward",
+    "expected_keywords": ["carry forward", "limit", "annual"],
+    "should_answer": true
+  },
+  {
+    "id": "eval-03",
+    "type": "cross_region",
+    "question": "What is the maternity leave entitlement for employees?",
+    "region": "India",
+    "expected_document": "India Leave Policy",
+    "forbidden_document": "US Employee Handbook",
+    "expected_keywords": ["26 weeks", "maternity"],
+    "should_answer": true
+  },
+  {
+    "id": "eval-04",
+    "type": "cross_region_isolation",
+    "question": "What are the rules for FMLA leave?",
+    "region": "India",
+    "forbidden_document": "US Employee Handbook",
+    "should_answer": false,
+    "expected_behavior": "refuse_or_hr"
+  },
+  {
+    "id": "eval-05",
+    "type": "version_prioritization",
+    "question": "How many casual leaves are provided under the current India leave policy?",
+    "region": "India",
+    "expected_document": "India Leave Policy",
+    "expected_version": "2026.1",
+    "forbidden_version": "2025.1",
+    "should_answer": true
+  },
+  {
+    "id": "eval-06",
+    "type": "out_of_scope",
+    "question": "Who will win the FIFA World Cup?",
+    "region": "India",
+    "should_answer": false,
+    "expected_behavior": "refusal"
+  },
+  {
+    "id": "eval-07",
+    "type": "no_policy_found",
+    "question": "Does the company provide free pet grooming and pet insurance stipends?",
+    "region": "India",
+    "should_answer": false,
+    "expected_behavior": "not_found_contact_hr"
+  },
+  {
+    "id": "eval-08",
+    "type": "benefits",
+    "question": "Does our group medical insurance cover dependents and parents?",
+    "region": "India",
+    "expected_document": "India Benefits & Group Medical Insurance",
+    "expected_section": "Group Medical Insurance",
+    "expected_keywords": ["dependents", "insurance", "coverage"],
+    "should_answer": true
+  },
+  {
+    "id": "eval-09",
+    "type": "us_standard",
+    "question": "How many days of PTO do US employees receive each year?",
+    "region": "US",
+    "expected_document": "US Employee Handbook",
+    "forbidden_document": "India Leave Policy",
+    "expected_keywords": ["PTO", "paid time off"],
+    "should_answer": true
+  },
+  {
+    "id": "eval-10",
+    "type": "expired_policy",
+    "question": "What were the 2024 remote work travel allowance guidelines in the US?",
+    "region": "US",
+    "forbidden_document": "US Remote Work Guidelines (Expired)",
+    "should_answer": false,
+    "expected_behavior": "not_found_or_inactive"
+  },
+  {
+    "id": "eval-11",
+    "type": "global_policy",
+    "question": "What is the company policy on workplace anti-harassment and ethics?",
+    "region": "India",
+    "expected_document": "Global Workplace Code of Conduct",
+    "expected_keywords": ["harassment", "ethics", "conduct"],
+    "should_answer": true
+  },
+  {
+    "id": "eval-12",
+    "type": "multi_part",
+    "question": "What is the notice period required during probation versus after confirmation?",
+    "region": "India",
+    "expected_document": "India Leave Policy",
+    "should_answer": true
+  }
+]
