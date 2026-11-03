@@ -1,5 +1,5 @@
 """
-PolicyPilot AI — Chat / Query Route
+LeaveHRAlone AI — Chat / Query Route
 Implements the core RAG pipeline: rewrite → retrieve → generate → cite → respond.
 """
 import asyncio
@@ -53,8 +53,13 @@ def _build_rag_prompt(
 
     context = "\n\n---\n\n".join(context_parts) if context_parts else "No relevant policy documents found."
 
-    return f"""You are PolicyPilot AI, a region-aware HR policy assistant for the {region} office.
+    return f"""You are LeaveHRAlone AI, a region-aware HR policy assistant for the {region} office.
 Answer the employee's question strictly based on the following HR policy context.
+Format your answer in two distinct sections:
+1. Provide a direct, clear, plain-language answer addressing the question first.
+2. Immediately follow with the exact supporting excerpt from the official policy document formatted as a blockquote:
+   > 📌 **Official Policy Excerpt (<Document Title>, <Section>):**
+   > "<Exact quoted policy sentence(s)>"
 Do NOT hallucinate or fabricate information not present in the context.
 If the context is insufficient, indicate that HR should be contacted.
 Respond in JSON format: {{"answer": "...", "confidence": "high|medium|low|none", "sources": [], "requires_hr": false, "refusal": false}}
@@ -381,7 +386,7 @@ async def chat_stream(
     db: AsyncSession = Depends(get_db),
 ):
     """
-    Server-Sent Events (SSE) streaming endpoint for PolicyPilot AI answers.
+    Server-Sent Events (SSE) streaming endpoint for LeaveHRAlone AI answers.
     Streams answer tokens, followed by a 'done' event with citations and confidence.
     """
     # 1. Determine region & role overrides

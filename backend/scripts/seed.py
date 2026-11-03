@@ -1,5 +1,5 @@
 """
-PolicyPilot AI — Database & Vector DB Seed Script
+LeaveHRAlone AI — Database & Vector DB Seed Script
 Seeds:
 - Demo Users (Employee India, Employee US, HR Admin, Super Admin)
 - Sample Policy Documents (India, US, Global with active/expired and v1/v2 pairs)
@@ -139,7 +139,7 @@ POLICIES = [
 
 
 async def seed() -> None:
-    print("🌱 Starting PolicyPilot AI database and vector seeding...")
+    print("🌱 Starting LeaveHRAlone AI database and vector seeding...")
     policies_dir = backend_dir / "data" / "sample_policies"
 
     async with AsyncSessionLocal() as session:

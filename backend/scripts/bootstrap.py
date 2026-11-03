@@ -1,5 +1,5 @@
 """
-PolicyPilot AI — Clean Production Bootstrap Script
+LeaveHRAlone AI — Clean Production Bootstrap Script
 Creates initial SUPER_ADMIN / HR_ADMIN user from environment variables.
 Does NOT create any demo documents, policies, or mock data.
 Usage:
@@ -32,14 +32,14 @@ from app.db.session import AsyncSessionLocal
 
 
 async def bootstrap():
-    admin_email = os.getenv("ADMIN_EMAIL", "admin@policypilot.ai").strip()
+    admin_email = os.getenv("ADMIN_EMAIL", "admin@leavehralone.ai").strip()
     admin_password = os.getenv("ADMIN_PASSWORD", "AdminPass123!").strip()
     admin_name = os.getenv("ADMIN_NAME", "System Administrator").strip()
     admin_region = os.getenv("ADMIN_REGION", "Global").strip()
     admin_country = os.getenv("ADMIN_COUNTRY", "Global").strip()
     admin_department = os.getenv("ADMIN_DEPARTMENT", "HR & Operations").strip()
 
-    print("🚀 Initializing PolicyPilot AI Production Bootstrap...")
+    print("🚀 Initializing LeaveHRAlone AI Production Bootstrap...")
     print(f"Target Admin: {admin_email} [{admin_region}]")
 
     async with AsyncSessionLocal() as session:

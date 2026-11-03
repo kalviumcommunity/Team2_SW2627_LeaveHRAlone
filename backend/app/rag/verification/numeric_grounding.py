@@ -1,5 +1,5 @@
 """
-PolicyPilot AI — Numeric & Entitlement Hallucination Verifier
+LeaveHRAlone AI — Numeric & Entitlement Hallucination Verifier
 Verifies that any numbers, percentages, currency values, dates, or day/week counts
 generated in the LLM answer strictly exist in the cited context chunks.
 """

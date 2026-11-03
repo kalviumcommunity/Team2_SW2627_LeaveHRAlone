@@ -1,44 +1,113 @@
-# OS
+# ==============================================================================
+# LeaveHRAlone - Git Ignore Configuration
+# ==============================================================================
+
+# Operating System Files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 Desktop.ini
 
-# Editor
+# IDE & Editor Files
 .idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
 *.swp
 *.swo
+*~
 
-# Environment (keep templates)
+# Environment & Secrets (Keep template/examples only)
 .env
-.env.local
-.env.*.local
+.env*.local
+*.env
+**/.env
+**/.env.*.local
 !.env.example
+!**/.env.example
 
 # Python
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
+*.egg
 *.egg-info/
+dist/
+build/
+eggs/
+parts/
+bin/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
 .venv/
 venv/
+ENV/
+env/
+.Python
+
+# Testing & Type Checking
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+nosetests.xml
+coverage/
 
-# Node / Next.js
+# Node.js & Next.js
 node_modules/
+**/node_modules/
 .next/
+**/.next/
 out/
+build/
+.pnp
+.pnp.js
 *.tsbuildinfo
+next-env.d.ts
+
+# Vercel
+.vercel
+**/.vercel
+
+# Databases & Vector Stores
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+*.sqlite-shm
+*.sqlite-wal
+qdrant_storage/
+**/qdrant_storage/
+pgdata/
+**/pgdata/
 
 # Logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
-# Local HR data (do not commit real documents)
+# Document Processing & Data
 backend/data/documents/*
 !backend/data/documents/.gitkeep
 backend/data/processed/*
 !backend/data/processed/.gitkeep
+
+# Agent rules
+frontend/AGENTS.md
+frontend/CLAUDE.md

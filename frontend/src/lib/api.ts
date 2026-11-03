@@ -51,6 +51,24 @@ export interface ConversationSummary {
   message_count: number;
 }
 
+export interface ConversationMessage {
+  id: string;
+  role: "user" | "assistant";
+  content: string;
+  confidence?: "high" | "medium" | "low" | "none";
+  sources?: ChatSource[];
+  created_at: string;
+}
+
+export interface ConversationDetail {
+  id: string;
+  title: string | null;
+  region_snapshot: string;
+  created_at: string;
+  updated_at: string;
+  messages: ConversationMessage[];
+}
+
 export interface LibraryDocument {
   id: string;
   title: string;
@@ -182,6 +200,9 @@ export const api = {
   // Conversations
   getConversations: () =>
     apiFetch<ConversationSummary[]>("/api/conversations"),
+
+  getConversation: (id: string) =>
+    apiFetch<ConversationDetail>(`/api/conversations/${id}`),
 
   deleteConversation: (id: string) =>
     apiFetch<void>(`/api/conversations/${id}`, { method: "DELETE" }),

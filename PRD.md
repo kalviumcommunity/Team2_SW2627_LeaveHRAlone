@@ -1,4 +1,4 @@
-PolicyPilot AIAI-Powered HR Policy & Benefits Assistant
+LeaveHRAlone AIAI-Powered HR Policy & Benefits Assistant
 Document Type: Product Requirements Document
 Version: 1.0
 Status: MVP / Hackathon Ready
@@ -6,8 +6,8 @@ Product Category: Enterprise AI / HRTech / RAG
 Primary Users: Employees, HR Administrators
 Core Technology: RAG, LLM, Vector Search, Document Intelligence
 1. Product Overview
-PolicyPilot AI is an AI-powered HR assistant that allows employees to ask questions about company policies, leave rules, benefits, employee handbooks, and region-specific HR guidelines.
-Instead of employees repeatedly contacting HR for questions that are already answered in company documentation, PolicyPilot AI retrieves the relevant information from approved HR documents and generates a concise, grounded answer with citations.
+LeaveHRAlone AI is an AI-powered HR assistant that allows employees to ask questions about company policies, leave rules, benefits, employee handbooks, and region-specific HR guidelines.
+Instead of employees repeatedly contacting HR for questions that are already answered in company documentation, LeaveHRAlone AI retrieves the relevant information from approved HR documents and generates a concise, grounded answer with citations.
 The system is designed to support organizations where HR policies differ by:
 Country
 Region
@@ -400,7 +400,7 @@ Negative Feedback
 Questions by Region
 Questions by Category
 25. Suggested Dashboard------------------------------------------------
-PolicyPilot AI
+LeaveHRAlone AI
 ------------------------------------------------
 
 Total Questions       1,284
@@ -428,7 +428,7 @@ Questions Requiring HR Attention
 ------------------------------------------------
 26. Employee Interface
 The employee interface should contain:
-HeaderPolicyPilot AI                         Profile
+HeaderLeaveHRAlone AI                         Profile
 Main areaHow can I help you with HR policies?
 
 [ Ask about leave, benefits, insurance... ]
@@ -819,7 +819,7 @@ Multilingual HR assistant
 Voice interface
 Proactive policy notifications
 42. Success Criteria
-PolicyPilot AI will be considered successful when:
+LeaveHRAlone AI will be considered successful when:
 Employees can ask HR policy questions in natural language.
 The system retrieves the correct region-specific policy.
 Answers are grounded in approved documents.
@@ -831,7 +831,7 @@ HR can identify frequently asked and unanswered questions.
 Employees can escalate unresolved questions.
 The system demonstrates measurable improvement on a dedicated RAG evaluation dataset.
 43. Product Differentiator
-PolicyPilot AI is not simply an HR chatbot.
+LeaveHRAlone AI is not simply an HR chatbot.
 Its core differentiator is:
         Employee Context
               +
@@ -850,7 +850,7 @@ Its core differentiator is:
        Trusted HR AI Assistant
 The product is designed around trust and traceability, which are more important for HR policy questions than simply generating fluent answers.
 44. Final Product Definition
-PolicyPilot AI is a secure, region-aware, RAG-powered HR assistant that transforms static HR documentation into an interactive employee self-service system.
+LeaveHRAlone AI is a secure, region-aware, RAG-powered HR assistant that transforms static HR documentation into an interactive employee self-service system.
 Employees get immediate answers.
 HR reduces repetitive workload.
 Administrators maintain a single source of truth.

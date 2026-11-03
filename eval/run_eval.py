@@ -1,5 +1,5 @@
 """
-PolicyPilot AI — Comprehensive Evaluation Harness
+LeaveHRAlone AI — Comprehensive Evaluation Harness
 Evaluates:
 - Retrieval: Recall@K, MRR (Mean Reciprocal Rank)
 - Region Isolation & Leak Prevention
@@ -109,7 +109,7 @@ def run_benchmark():
     total_in_scope = 0
 
     print("=" * 70)
-    print("🚀 Running PolicyPilot AI RAG & Retrieval Benchmark")
+    print("🚀 Running LeaveHRAlone AI RAG & Retrieval Benchmark")
     print(f"📊 Total Evaluation Test Cases: {total_cases}")
     print("=" * 70)
 
@@ -185,7 +185,7 @@ def run_benchmark():
     hallucination_rate = round(100.0 - citation_accuracy, 1)
 
     print("\n" + "=" * 70)
-    print("📋 PolicyPilot AI — Evaluation Results against PRD Targets (§36)")
+    print("📋 LeaveHRAlone AI — Evaluation Results against PRD Targets (§36)")
     print("=" * 70)
     print(f"| Metric                   | Target (PRD) | Result Achieved | Status |")
     print(f"|--------------------------|--------------|-----------------|--------|")

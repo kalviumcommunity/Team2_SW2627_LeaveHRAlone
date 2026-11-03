@@ -17,7 +17,7 @@ export function ChatInput({
   isLoading,
   region,
   onRegionChange,
-  placeholder = "Ask PolicyPilot anything about your work life...",
+  placeholder = "Ask leavehralone anything about your work life...",
 }: ChatInputProps) {
   const [value, setValue] = useState("");
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -105,7 +105,7 @@ export function ChatInput({
         </div>
       </div>
       <div className="chat-footer-text" style={{ marginTop: 8, fontSize: 11, color: "var(--neutral-400)" }}>
-        PolicyPilot AI · Answers are grounded in your company&apos;s active HR policies
+        leavehralone · Answers are grounded in your company&apos;s active HR policies
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 # LeaveHRAlone Data Dictionary & Metadata Schema
 
-This document provides a comprehensive reference of all data models, metadata schemas, vector payload structures, and API data types utilized within **LeaveHRAlone (PolicyPilot AI)**.
+This document provides a comprehensive reference of all data models, metadata schemas, vector payload structures, and API data types utilized within **LeaveHRAlone (LeaveHRAlone AI)**.
 
 ---
 

@@ -3,7 +3,7 @@ import "./globals.css";
 import { AuthProvider } from "@/lib/auth-context";
 
 export const metadata: Metadata = {
-  title: "PolicyPilot AI — HR Policy Assistant",
+  title: "leavehralone — HR Policy Assistant",
   description:
     "AI-powered, region-aware HR policy assistant. Get instant answers about leave, benefits, insurance, and workplace policies — all backed by your company's official documents.",
   keywords: ["HR", "policy", "AI", "leave", "benefits", "insurance", "workplace"],

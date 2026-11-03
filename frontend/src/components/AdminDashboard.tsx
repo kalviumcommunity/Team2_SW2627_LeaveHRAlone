@@ -346,7 +346,7 @@ export function AdminDashboard({ onClose }: AdminDashboardProps) {
             <div className="admin-badge-icon">⚡</div>
             <div>
               <div className="admin-eyebrow">HR ADMIN COMMAND CENTER</div>
-              <h1 className="admin-title">PolicyPilot AI Governance & Live RAG Engine</h1>
+              <h1 className="admin-title">leavehralone Governance & Live RAG Engine</h1>
             </div>
           </div>
           <button className="admin-close-btn" onClick={onClose} id="btn-close-admin-dash">
@@ -656,7 +656,7 @@ export function AdminDashboard({ onClose }: AdminDashboardProps) {
                 {tickets.length === 0 ? (
                   <div className="empty-tickets">
                     <span>🎉</span>
-                    <div>No pending employee escalations. All inquiries resolved by PolicyPilot AI.</div>
+                    <div>No pending employee escalations. All inquiries resolved by leavehralone.</div>
                   </div>
                 ) : (
                   <div className="tickets-grid">
@@ -1109,7 +1109,7 @@ export function AdminDashboard({ onClose }: AdminDashboardProps) {
           <div className="admin-overlay" style={{ zIndex: 1100 }}>
             <div className="admin-container" style={{ maxWidth: 500, padding: 24 }}>
               <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 16 }}>
-                <h3 style={{ fontSize: 18, fontWeight: 700 }}>Add Employee to PolicyPilot</h3>
+                <h3 style={{ fontSize: 18, fontWeight: 700 }}>Add Employee to leavehralone</h3>
                 <button className="admin-close-btn" onClick={() => setUserModalOpen(false)}>✕</button>
               </div>
 

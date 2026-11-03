@@ -1,5 +1,5 @@
 """
-LeaveHRAlone (PolicyPilot AI) - Token Counter & Cost Estimation Script
+LeaveHRAlone (LeaveHRAlone AI) - Token Counter & Cost Estimation Script
 
 This script:
 1. Uses tiktoken to count tokens for sample inputs/outputs from the project corpus.
@@ -78,7 +78,7 @@ def load_prd_sample(prd_path: str = "PRD.md") -> str:
     if os.path.exists(prd_path):
         with open(prd_path, "r", encoding="utf-8") as f:
             return f.read()
-    return "PolicyPilot AI is an AI-powered HR assistant that allows employees to ask questions about company policies."
+    return "LeaveHRAlone AI is an AI-powered HR assistant that allows employees to ask questions about company policies."
 
 
 def run_token_analysis() -> Dict[str, Any]:
@@ -190,7 +190,7 @@ def run_token_analysis() -> Dict[str, Any]:
         })
 
     full_results = {
-        "project": "LeaveHRAlone (PolicyPilot AI)",
+        "project": "LeaveHRAlone (LeaveHRAlone AI)",
         "encoder": encoder.name if hasattr(encoder, "name") else "o200k_base / cl100k_base",
         "task_2_sample_counts": task_2_results,
         "task_3_cost_estimation": {
@@ -215,7 +215,7 @@ def run_token_analysis() -> Dict[str, Any]:
 def print_report(results: Dict[str, Any]) -> None:
     """Prints a formatted report to the console."""
     print("=" * 80)
-    print("      LEAVEHRALONE (POLICYPILOT AI) - TOKEN & COST ANALYSIS REPORT      ")
+    print("      LEAVEHRALONE (LEAVEHRALONE AI) - TOKEN & COST ANALYSIS REPORT      ")
     print("=" * 80)
     print(f"Tokenizer Encoder: {results['encoder']}\n")
 
@@ -268,7 +268,7 @@ def generate_markdown_report(results: Dict[str, Any], output_md_path: str = "doc
 
     md_content = f"""# Token Counting & Cost Estimation Analysis
 
-> **Project**: LeaveHRAlone (PolicyPilot AI)  
+> **Project**: LeaveHRAlone (LeaveHRAlone AI)  
 > **Encoder**: `{results['encoder']}`  
 > **Date**: October 2026  
 

@@ -1,4 +1,4 @@
-name: PolicyPilot AI CI
+name: LeaveHRAlone AI CI
 
 on:
   push:

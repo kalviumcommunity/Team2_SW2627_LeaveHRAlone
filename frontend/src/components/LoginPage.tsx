@@ -77,7 +77,7 @@ export function LoginPage() {
                 letterSpacing: "-0.5px",
               }}
             >
-              PolicyPilot<span style={{ color: "var(--brand-yellow-dark)" }}> AI</span>
+              leave<span style={{ color: "var(--brand-yellow-dark)" }}>hralone</span>
             </div>
             <div style={{ fontSize: 11, color: "var(--neutral-400)", fontWeight: 600 }}>
               YOUR PEOPLE. YOUR ANSWERS.
@@ -91,7 +91,7 @@ export function LoginPage() {
         <div className="login-subtitle">
           {mode === "login"
             ? "Sign in to access your HR policy assistant."
-            : "Set up your PolicyPilot AI account to get started."}
+            : "Set up your leavehralone account to get started."}
         </div>
 
         {/* Demo hint */}

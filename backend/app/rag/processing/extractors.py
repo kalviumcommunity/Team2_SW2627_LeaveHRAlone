@@ -113,41 +113,53 @@ def extract_text_from_docx(file_path: str) -> List[ExtractedPage]:
 
 
 def extract_text_from_txt(file_path: str) -> List[ExtractedPage]:
-    """Extract text from plain text file."""
+    """Extract text from plain text file, splitting naturally on section headers or length limits."""
     with open(file_path, "r", encoding="utf-8", errors="replace") as f:
         content = f.read()
 
     pages: List[ExtractedPage] = []
     lines = content.splitlines()
 
-    current_section = "General"
+    current_section = "Overview"
     chunk_lines = []
     page_num = 1
 
     for line in lines:
         stripped = line.strip()
-        # Detect markdown headers as sections
-        if stripped.startswith("#"):
+        # If this is a markdown section header and we already have accumulated text
+        if stripped.startswith("#") and any(l.strip() for l in chunk_lines):
+            pages.append(
+                ExtractedPage(
+                    page_number=page_num,
+                    text="\n".join(chunk_lines).strip(),
+                    section=current_section,
+                )
+            )
+            page_num += 1
+            chunk_lines = []
+            current_section = stripped.lstrip("#").strip()
+        elif stripped.startswith("#"):
             current_section = stripped.lstrip("#").strip()
 
         chunk_lines.append(line)
-        # Approximate 40-50 lines per page
+
+        # Approximate 40-50 lines per page fallback
         if len(chunk_lines) >= 45:
             pages.append(
                 ExtractedPage(
                     page_number=page_num,
-                    text="\n".join(chunk_lines),
+                    text="\n".join(chunk_lines).strip(),
                     section=current_section,
                 )
             )
             page_num += 1
             chunk_lines = []
 
-    if chunk_lines:
+    if any(l.strip() for l in chunk_lines):
         pages.append(
             ExtractedPage(
                 page_number=page_num,
-                text="\n".join(chunk_lines),
+                text="\n".join(chunk_lines).strip(),
                 section=current_section,
             )
         )

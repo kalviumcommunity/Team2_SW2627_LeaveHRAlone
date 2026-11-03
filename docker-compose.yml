@@ -2,10 +2,10 @@
 services:
   postgres:
     image: postgres:16-alpine
-    container_name: policypilot-postgres
+    container_name: leavehralone-postgres
     restart: unless-stopped
     environment:
-      POSTGRES_DB: ${POSTGRES_DB:-policypilot}
+      POSTGRES_DB: ${POSTGRES_DB:-leavehralone}
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
     ports:
@@ -13,14 +13,14 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-policypilot}"]
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-postgres} -d ${POSTGRES_DB:-leavehralone}"]
       interval: 5s
       timeout: 5s
       retries: 5
 
   qdrant:
     image: qdrant/qdrant:v1.12.0
-    container_name: policypilot-qdrant
+    container_name: leavehralone-qdrant
     restart: unless-stopped
     ports:
       - "${QDRANT_HTTP_PORT:-6333}:6333"
@@ -35,7 +35,7 @@ services:
 
   redis:
     image: redis:7-alpine
-    container_name: policypilot-redis
+    container_name: leavehralone-redis
     restart: unless-stopped
     ports:
       - "${REDIS_PORT:-6379}:6379"
@@ -51,13 +51,13 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    container_name: policypilot-backend
+    container_name: leavehralone-backend
     restart: unless-stopped
     env_file:
       - ./backend/.env
     environment:
-      - DATABASE_URL=postgresql+asyncpg://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-policypilot}
-      - SYNC_DATABASE_URL=postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-policypilot}
+      - DATABASE_URL=postgresql+asyncpg://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-leavehralone}
+      - SYNC_DATABASE_URL=postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-leavehralone}
       - QDRANT_URL=http://qdrant:6333
       - REDIS_URL=redis://redis:6379/0
       - CELERY_BROKER_URL=redis://redis:6379/0
@@ -77,14 +77,14 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    container_name: policypilot-worker
+    container_name: leavehralone-worker
     restart: unless-stopped
     command: celery -A app.core.celery_app.celery worker --loglevel=info
     env_file:
       - ./backend/.env
     environment:
-      - DATABASE_URL=postgresql+asyncpg://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-policypilot}
-      - SYNC_DATABASE_URL=postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-policypilot}
+      - DATABASE_URL=postgresql+asyncpg://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-leavehralone}
+      - SYNC_DATABASE_URL=postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-postgres}@postgres:5432/${POSTGRES_DB:-leavehralone}
       - QDRANT_URL=http://qdrant:6333
       - REDIS_URL=redis://redis:6379/0
       - CELERY_BROKER_URL=redis://redis:6379/0
@@ -102,7 +102,7 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    container_name: policypilot-frontend
+    container_name: leavehralone-frontend
     restart: unless-stopped
     environment:
       - NEXT_PUBLIC_API_URL=http://localhost:8000

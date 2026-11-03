@@ -7,7 +7,7 @@ from app.api.routes import api_router
 from app.core.config import settings
 from app.rag.vector_db import vector_db
 
-logger = logging.getLogger("policypilot")
+logger = logging.getLogger("leavehralone")
 
 
 @asynccontextmanager
@@ -88,14 +88,19 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title=settings.app_name,
-    description="PolicyPilot AI — Production-grade, region-aware HR policy assistant API.",
+    description="LeaveHRAlone AI — Production-grade, region-aware HR policy assistant API.",
     version="1.0.0",
     lifespan=lifespan,
 )
 
+configured_origins = [o.strip() for o in settings.frontend_origin.split(",") if o.strip()]
+default_origins = ["http://localhost:3000", "http://localhost:5173", "http://127.0.0.1:3000", "http://127.0.0.1:5173"]
+allowed_origins = list(set(configured_origins + default_origins))
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[settings.frontend_origin, "http://localhost:3000", "http://localhost:5173", "http://127.0.0.1:3000", "http://127.0.0.1:5173"],
+    allow_origins=allowed_origins,
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

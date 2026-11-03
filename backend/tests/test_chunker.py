@@ -47,5 +47,5 @@ def test_overlap_must_be_smaller_than_chunk_size():
 
 
 def test_count_tokens_utility():
-    text = "PolicyPilot AI Assistant"
+    text = "LeaveHRAlone AI Assistant"
     assert count_tokens(text) > 0

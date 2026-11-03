@@ -1,5 +1,5 @@
 {
-  "project": "LeaveHRAlone (PolicyPilot AI)",
+  "project": "LeaveHRAlone (LeaveHRAlone AI)",
   "encoder": "o200k_base",
   "task_2_sample_counts": [
     {
@@ -21,7 +21,7 @@
       "character_count": 21345,
       "word_count": 2684,
       "token_count": 4404,
-      "text_preview": "PolicyPilot AIAI-Powered HR Policy & Benefits Assistant\nDocument Type: Product Requirements Document\nVersion: 1.0\nStatus..."
+      "text_preview": "LeaveHRAlone AIAI-Powered HR Policy & Benefits Assistant\nDocument Type: Product Requirements Document\nVersion: 1.0\nStatus..."
     }
   ],
   "task_3_cost_estimation": {

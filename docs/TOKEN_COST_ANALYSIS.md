@@ -1,6 +1,6 @@
 # Token Counting & Cost Estimation Analysis
 
-> **Project**: LeaveHRAlone (PolicyPilot AI)  
+> **Project**: LeaveHRAlone (LeaveHRAlone AI)  
 > **Encoder**: `o200k_base`  
 > **Date**: October 2026  
 

@@ -1,4 +1,4 @@
-# PolicyPilot AI (LeaveHRAlone)
+# LeaveHRAlone AI (LeaveHRAlone)
 
 > **Enterprise Production-Grade, Region-Aware HR Policy & Benefits Assistant**
 
@@ -10,9 +10,9 @@
 [![Qdrant](https://img.shields.io/badge/VectorDB-Qdrant-red.svg)](https://qdrant.tech/)
 [![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-336791.svg)](https://www.postgresql.org/)
 
-**PolicyPilot AI** is an intelligent internal HR assistant that enables employees to ask natural-language questions about company policies, leave rules, health insurance benefits, remote work guidelines, and employee handbooks.
+**LeaveHRAlone AI** is an intelligent internal HR assistant that enables employees to ask natural-language questions about company policies, leave rules, health insurance benefits, remote work guidelines, and employee handbooks.
 
-Instead of employees repeatedly emailing or ticketing HR for questions already documented in internal repositories, PolicyPilot AI retrieves verified excerpts and generates concise, grounded answers with **100% traceable citations** while enforcing **strict geographical region isolation** and **zero tolerance for policy hallucinations**.
+Instead of employees repeatedly emailing or ticketing HR for questions already documented in internal repositories, LeaveHRAlone AI retrieves verified excerpts and generates concise, grounded answers with **100% traceable citations** while enforcing **strict geographical region isolation** and **zero tolerance for policy hallucinations**.
 
 ---
 
@@ -29,7 +29,7 @@ HR teams spend over **40% of their bandwidth** answering repetitive employee que
 2. **Outdated Policies**: Companies release yearly amendments (v1.0 → v2.0). LLMs without strict version governance retrieve superseded rules.
 3. **Hallucinations**: Inventing leave balances or insurance limits creates serious compliance and liability risks.
 
-### The PolicyPilot AI Solution:
+### The LeaveHRAlone AI Solution:
 ```text
   Employee Context (Region + Role)
                 +
@@ -205,7 +205,7 @@ The database seed script (`python backend/scripts/seed.py`) pre-configures stand
 
 ## 📄 Real Document Ingestion & Document Lifecycle (Upload, Update, Delete)
 
-PolicyPilot AI supports end-to-end enterprise document lifecycle management with zero dependency on pre-seeded data:
+LeaveHRAlone AI supports end-to-end enterprise document lifecycle management with zero dependency on pre-seeded data:
 
 ### 1. Uploading Real Documents
 - HR Admins navigate to **HR Command Center ➔ Documents ➔ + Upload Real Policy**.
@@ -227,7 +227,7 @@ PolicyPilot AI supports end-to-end enterprise document lifecycle management with
   4. Records an audit log event (`DOCUMENT_DELETE`).
 
 ### 4. Zero-Seed Mode (Fresh Database Deployment)
-- On a completely fresh database without running `seed.py`, PolicyPilot AI automatically provisions the initial administrative credentials on startup:
+- On a completely fresh database without running `seed.py`, LeaveHRAlone AI automatically provisions the initial administrative credentials on startup:
   - **Email**: `hr.admin@example.com`
   - **Password**: `password123`
 - Admins can immediately log in, upload their own company handbooks, and employees will receive answers strictly grounded in the uploaded files.
@@ -250,7 +250,7 @@ For automated test suites and demonstration, the database can also be optionally
 
 ## 📊 Evaluation & Quality Benchmarks (PRD §35–36)
 
-PolicyPilot AI is evaluated using a dedicated benchmark harness (`eval/run_eval.py`) against a curated test dataset (`eval/dataset.json`) covering cross-region leak attempts, outdated policy queries, out-of-scope refusals, and follow-up pronoun rewriting.
+LeaveHRAlone AI is evaluated using a dedicated benchmark harness (`eval/run_eval.py`) against a curated test dataset (`eval/dataset.json`) covering cross-region leak attempts, outdated policy queries, out-of-scope refusals, and follow-up pronoun rewriting.
 
 ### Benchmark Results
 
@@ -259,7 +259,7 @@ Run the evaluation harness:
 python eval/run_eval.py
 ```
 
-| Metric | PRD Target (§36) | PolicyPilot AI Result | Status |
+| Metric | PRD Target (§36) | LeaveHRAlone AI Result | Status |
 |---|---|---|---|
 | **Retrieval Recall@5** | $\ge 85.0\%$ | **100.0%** | **PASS ✓** |
 | **Mean Reciprocal Rank (MRR)** | $\ge 0.700$ | **0.917** | **PASS ✓** |
@@ -307,7 +307,7 @@ Try these scenarios in the web UI at `http://localhost:3000`:
 
 ### Scenario 4: Cross-Region Leak Prevention
 - While region is set to **India**, ask: *"What are the rules for FMLA leave?"*
-- **Result**: PolicyPilot AI recognizes FMLA as a US policy not active in India and refuses to mix policies.
+- **Result**: LeaveHRAlone AI recognizes FMLA as a US policy not active in India and refuses to mix policies.
 
 ### Scenario 5: Out-of-Scope Hallucination Refusal
 - Ask: *"Who will win the FIFA World Cup?"*

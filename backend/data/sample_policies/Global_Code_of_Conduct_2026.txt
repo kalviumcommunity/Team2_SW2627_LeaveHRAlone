@@ -8,7 +8,7 @@ Category: Workplace Policies
 This Code of Conduct applies globally to all employees, contractors, executives, and directors across all operational regions (India, United States, United Kingdom, Singapore, and remote locations worldwide).
 
 ## 2.0 Equal Opportunity & Anti-Harassment
-2.1 PolicyPilot AI operates an absolute zero-tolerance policy towards any form of harassment, discrimination, bullying, or retaliation based on race, gender, religion, sexual orientation, disability, or age.
+2.1 LeaveHRAlone AI operates an absolute zero-tolerance policy towards any form of harassment, discrimination, bullying, or retaliation based on race, gender, religion, sexual orientation, disability, or age.
 2.2 All employees have the right to a respectful and psychologically safe workplace environment.
 2.3 Any instance of discriminatory conduct will result in immediate disciplinary review up to and including termination of employment.
 
@@ -17,5 +17,5 @@ This Code of Conduct applies globally to all employees, contractors, executives,
 3.2 Customer data and internal policies must never be input into unauthorized third-party generative AI tools without explicit prior approval from the Chief Information Security Officer (CISO).
 
 ## 4.0 Whistleblower Protection
-4.1 The company provides a confidential, anonymous reporting hotline (whistleblower@policypilot.internal) for reporting ethical violations, fraud, or policy breaches.
+4.1 The company provides a confidential, anonymous reporting hotline (whistleblower@leavehralone.internal) for reporting ethical violations, fraud, or policy breaches.
 4.2 Retaliation of any kind against an employee who reports a concern in good faith is strictly prohibited by law and company policy.

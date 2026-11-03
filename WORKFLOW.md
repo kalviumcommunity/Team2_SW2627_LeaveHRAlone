@@ -1,6 +1,6 @@
 # Team GitHub Workflow & Development Conventions
 
-This document defines the engineering workflow, git branching rules, commit message standards, code review process, and issue tracking methodology for the **LeaveHRAlone** (PolicyPilot AI) project team.
+This document defines the engineering workflow, git branching rules, commit message standards, code review process, and issue tracking methodology for the **LeaveHRAlone** (LeaveHRAlone AI) project team.
 
 ---
 

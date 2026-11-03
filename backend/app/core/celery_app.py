@@ -2,7 +2,7 @@ from celery import Celery
 from app.core.config import settings
 
 celery = Celery(
-    "policypilot",
+    "leavehralone",
     broker=settings.celery_broker_url,
     backend=settings.celery_result_backend,
     include=["app.rag.ingestion.tasks"],

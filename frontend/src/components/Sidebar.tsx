@@ -44,7 +44,7 @@ export function Sidebar({
       <div className="sidebar-logo">
         <div className="logo-mark">🤖</div>
         <div className="logo-name">
-          Policy<span>Pilot</span>
+          leave<span>hralone</span>
         </div>
         <div className="logo-tagline">Your people. Your answers.</div>
       </div>
@@ -57,14 +57,14 @@ export function Sidebar({
           <span>New conversation</span>
         </button>
 
-        {/* Ask PolicyPilot */}
+        {/* Ask leavehralone */}
         <button
           className={`nav-btn ${currentView === "chat" && !activeConversationId ? "active" : ""}`}
           onClick={onGoHome}
-          id="btn-ask-policypilot"
+          id="btn-ask-leavehralone"
         >
           <span>💬</span>
-          <span>Ask PolicyPilot</span>
+          <span>Ask leavehralone</span>
         </button>
 
         {/* Knowledge Library */}

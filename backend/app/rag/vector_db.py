@@ -19,10 +19,15 @@ class VectorDBService:
         self.client: QdrantClient = self._init_client()
 
     def _init_client(self) -> QdrantClient:
-        """Initialize Qdrant client. Supports in-memory ':memory:' or remote server URL."""
+        """Initialize Qdrant client. Supports in-memory ':memory:', local disk 'path:...', or remote server URL."""
         if self.url == ":memory:":
             logger.info("Using in-memory Qdrant instance")
             return QdrantClient(":memory:")
+
+        if self.url.startswith("path:"):
+            storage_path = self.url.split("path:", 1)[1]
+            logger.info("Using local persistent Qdrant at %s", storage_path)
+            return QdrantClient(path=storage_path)
 
         try:
             client = QdrantClient(url=self.url, timeout=5.0)

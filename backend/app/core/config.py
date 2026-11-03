@@ -3,19 +3,19 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    app_name: str = "PolicyPilot AI"
+    app_name: str = "LeaveHRAlone AI"
     app_env: str = "development"
     api_host: str = "0.0.0.0"
     api_port: int = 8000
     frontend_origin: str = "http://localhost:3000"
 
     # PostgreSQL Database
-    postgres_db: str = "policypilot"
+    postgres_db: str = "leavehralone"
     postgres_user: str = "postgres"
     postgres_password: str = "postgres"
     postgres_port: int = 5432
-    database_url: str = "postgresql+asyncpg://postgres:postgres@localhost:5432/policypilot"
-    sync_database_url: str = "postgresql://postgres:postgres@localhost:5432/policypilot"
+    database_url: str = "postgresql+asyncpg://postgres:postgres@localhost:5432/leavehralone"
+    sync_database_url: str = "postgresql://postgres:postgres@localhost:5432/leavehralone"
 
     # Qdrant Vector Database
     qdrant_url: str = "http://localhost:6333"

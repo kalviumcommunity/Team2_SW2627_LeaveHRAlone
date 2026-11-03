@@ -1,5 +1,5 @@
 """
-PolicyPilot AI — User Management Route
+LeaveHRAlone AI — User Management Route
 Provides HR administrators full control over employee rosters:
 - List & search users
 - Create & edit individual employees
@@ -193,7 +193,7 @@ async def bulk_import_users(
             else UserRole.EMPLOYEE.value
         )
 
-        raw_pwd = row.get("password", "").strip() or "WelcomePolicyPilot2026!"
+        raw_pwd = row.get("password", "").strip() or "WelcomeLeaveHRAlone2026!"
 
         user = User(
             id=uuid.uuid4(),

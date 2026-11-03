@@ -72,7 +72,7 @@ export function SourcePreviewDrawer({
           <div className="drawer-note">
             <span style={{ fontSize: 16 }}>🛡️</span>
             <span>
-              All PolicyPilot answers are strictly grounded in active, approved HR documentation for your geographical jurisdiction.
+              All leavehralone answers are strictly grounded in active, approved HR documentation for your geographical jurisdiction.
             </span>
           </div>
         </div>

@@ -105,16 +105,19 @@ export default function Home() {
     if (user?.region) setRegion(user.region);
   }, [user]);
 
-  // Load conversations when user logs in
+  // Reset active chat and load conversations when user changes
   useEffect(() => {
+    setMessages([]);
+    setActiveConversationId(null);
+    setView("home");
     if (user) {
       api.getConversations()
         .then(setConversations)
-        .catch(() => {});
+        .catch(() => setConversations([]));
     } else {
       setConversations([]);
     }
-  }, [user]);
+  }, [user?.id]);
 
   // Scroll to bottom on new message
   useEffect(() => {
@@ -203,24 +206,43 @@ export default function Home() {
     setView("home");
   }, []);
 
-  const handleSelectConversation = useCallback((id: string) => {
-    // For now, just switch to chat view and clear messages
-    // (full conversation loading would require a messages endpoint)
-    setActiveConversationId(id);
-    setView("chat");
-    const conv = conversations.find((c) => c.id === id);
-    if (conv) {
-      setMessages([
-        {
-          id: crypto.randomUUID(),
-          role: "assistant",
-          content: `Continuing conversation: "${conv.title}". Ask your next HR question.`,
-          confidence: "none",
-          sources: [],
-        },
-      ]);
-    }
-  }, [conversations]);
+  const handleSelectConversation = useCallback(
+    async (id: string) => {
+      setActiveConversationId(id);
+      setView("chat");
+      try {
+        const detail = await api.getConversation(id);
+        if (detail && Array.isArray(detail.messages)) {
+          setMessages(
+            detail.messages.map((m) => ({
+              id: m.id,
+              role: m.role as "user" | "assistant",
+              content: m.content,
+              confidence: m.confidence,
+              sources: m.sources,
+            }))
+          );
+          return;
+        }
+      } catch (err) {
+        console.error("Failed to load conversation messages", err);
+      }
+
+      const conv = conversations.find((c) => c.id === id);
+      if (conv) {
+        setMessages([
+          {
+            id: crypto.randomUUID(),
+            role: "assistant",
+            content: `Continuing conversation: "${conv.title}". Ask your next HR question.`,
+            confidence: "none",
+            sources: [],
+          },
+        ]);
+      }
+    },
+    [conversations]
+  );
 
   const handleCategoryClick = useCallback(
     (query: string) => {
@@ -244,7 +266,7 @@ export default function Home() {
         <div style={{ textAlign: "center" }}>
           <div style={{ fontSize: 40, marginBottom: 12 }}>🤖</div>
           <div style={{ fontSize: 14, color: "var(--neutral-400)" }}>
-            Loading PolicyPilot AI...
+            Loading leavehralone...
           </div>
         </div>
       </div>
@@ -452,7 +474,7 @@ export default function Home() {
         onRegionChange={setRegion}
         placeholder={
           view === "home"
-            ? "Ask PolicyPilot anything about your work life..."
+            ? "Ask leavehralone anything about your work life..."
             : "Ask a follow-up question..."
         }
       />

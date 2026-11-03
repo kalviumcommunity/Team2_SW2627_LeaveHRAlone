@@ -29,6 +29,88 @@ function ConfidenceBadge({ confidence }: { confidence: string }) {
   );
 }
 
+function formatInline(text: string): React.ReactNode[] {
+  const parts: React.ReactNode[] = [];
+  const regex = /(\*{1,2})(.*?)\1/g;
+  let lastIndex = 0;
+  let match;
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.substring(lastIndex, match.index));
+    }
+    const delim = match[1];
+    const inner = match[2];
+    if (delim === '**') {
+      parts.push(<strong key={match.index}>{inner}</strong>);
+    } else {
+      parts.push(<em key={match.index}>{inner}</em>);
+    }
+    lastIndex = regex.lastIndex;
+  }
+  if (lastIndex < text.length) {
+    parts.push(text.substring(lastIndex));
+  }
+  return parts.length > 0 ? parts : [text];
+}
+
+function renderFormattedMessage(content: string) {
+  const lines = content.split("\n");
+  const blocks: Array<{ type: "paragraph" | "quote"; lines: string[] }> = [];
+  let currentBlock: { type: "paragraph" | "quote"; lines: string[] } | null = null;
+  for (const line of lines) {
+    const trimmed = line.trim();
+    const isQuote = trimmed.startsWith(">");
+    const cleanedLine = isQuote ? trimmed.replace(/^>\s?/, "") : line;
+    if (!currentBlock) {
+      currentBlock = { type: isQuote ? "quote" : "paragraph", lines: [cleanedLine] };
+    } else if ((isQuote && currentBlock.type === "quote") || (!isQuote && currentBlock.type === "paragraph")) {
+      currentBlock.lines.push(cleanedLine);
+    } else {
+      blocks.push(currentBlock);
+      currentBlock = { type: isQuote ? "quote" : "paragraph", lines: [cleanedLine] };
+    }
+  }
+  if (currentBlock) blocks.push(currentBlock);
+  return blocks.map((block, idx) => {
+    if (block.type === "quote") {
+      return (
+        <div
+          key={idx}
+          className="policy-excerpt-highlight"
+          style={{
+            margin: "12px 0",
+            padding: "12px 16px",
+            backgroundColor: "#FFFBEB",
+            borderLeft: "4px solid #F5C518",
+            borderRadius: "0 8px 8px 0",
+            borderTop: "1px solid #FEF3C7",
+            borderRight: "1px solid #FEF3C7",
+            borderBottom: "1px solid #FEF3C7",
+            fontSize: "13.5px",
+            lineHeight: "1.6",
+            color: "#292524",
+          }}
+        >
+          {block.lines.map((l, li) => (
+            <div key={li} style={{ marginBottom: li < block.lines.length - 1 ? 4 : 0 }}>
+              {formatInline(l)}
+            </div>
+          ))}
+        </div>
+      );
+    }
+    return (
+      <div key={idx} className="message-answer-section">
+        {block.lines.map((l, li) => (
+          <p key={li} style={{ marginBottom: 6 }}>
+            {formatInline(l) || "\u00A0"}
+          </p>
+        ))}
+      </div>
+    );
+  });
+}
+
 export function MessageBubble({
   id,
   role,
@@ -114,7 +196,7 @@ export function MessageBubble({
       <div style={{ flex: 1, minWidth: 0 }}>
         {/* Header */}
         <div className="message-bot-meta">
-          <span className="message-bot-name">PolicyPilot</span>
+          <span className="message-bot-name">leavehralone</span>
           <span className="message-bot-label">HR assistant</span>
           {confidence && !isLoading && (
             <ConfidenceBadge confidence={confidence} />
@@ -130,9 +212,7 @@ export function MessageBubble({
           </div>
         ) : (
           <div className="message-bot-content">
-            {content.split("\n").map((line, i) => (
-              <p key={i}>{line || "\u00A0"}</p>
-            ))}
+            {renderFormattedMessage(content)}
           </div>
         )}
 
@@ -246,7 +326,7 @@ export function MessageBubble({
         {/* Negative Feedback Modal / Dropdown */}
         {showNegativeModal && (
           <div className="feedback-reason-box">
-            <div className="feedback-reason-title">Help us improve PolicyPilot</div>
+            <div className="feedback-reason-title">Help us improve leavehralone</div>
             <select
               value={selectedReason}
               onChange={(e) => setSelectedReason(e.target.value)}
