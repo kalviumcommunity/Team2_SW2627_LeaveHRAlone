@@ -2,11 +2,15 @@
   "name": "leave-hr-alone",
   "version": "1.0.0",
   "private": true,
-  "description": "LeaveHRAlone AI - Region-aware HR policy assistant",
+  "description": "leavehralone - Region-aware HR policy assistant",
   "scripts": {
     "dev": "npm run dev --prefix frontend",
     "build": "npm run build --prefix frontend",
     "start": "npm run start --prefix frontend"
+  },
+  "dependencies": {
+    "next": "16.3.8",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
   }
 }
-
