@@ -23,6 +23,27 @@ HR teams spend over **40% of their bandwidth** answering repetitive employee que
 - *"Does our group insurance cover dependent parents?"*
 - *"What is our parental leave entitlement?"*
 
+- 
+### The LeaveHRAlone AI Solution:
+```text
+  Employee Context (Region + Role)
+                +
+  3-Tier Region-Aware Vector Search (Qdrant)
+                +
+  Version Governance (Active vs Archived)
+                +
+  Strict Grounding Guardrails (Refuse if not found)
+                +
+  Verifiable Citation Chips & Source Preview Drawer
+                +
+  1-Click HR Escalation Ticket System
+                =
+  Trusted Enterprise HR Assistant
+```
+
+---
+
+
 ### Why General AI Chatbots Fail at HR:
 1. **Regional Differences**: A leave policy in India (24 days, statutory maternity) differs drastically from US PTO and FMLA. Generic LLMs leak policies across jurisdictions.
 2. **Outdated Policies**: Companies release yearly amendments (v1.0 → v2.0). LLMs without strict version governance retrieve superseded rules.
