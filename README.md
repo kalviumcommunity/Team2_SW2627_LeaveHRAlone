@@ -15,3 +15,15 @@
 Instead of employees repeatedly emailing or ticketing HR for questions already documented in internal repositories, LeaveHRAlone AI retrieves verified excerpts and generates concise, grounded answers with **100% traceable citations** while enforcing **strict geographical region isolation** and **zero tolerance for policy hallucinations**.
 
 ---
+## 📌 Problem Statement & Solution
+
+HR teams spend over **40% of their bandwidth** answering repetitive employee questions:
+- *"How many annual leaves do I have in India?"*
+- *"Can I carry forward unused annual leave?"*
+- *"Does our group insurance cover dependent parents?"*
+- *"What is our parental leave entitlement?"*
+
+### Why General AI Chatbots Fail at HR:
+1. **Regional Differences**: A leave policy in India (24 days, statutory maternity) differs drastically from US PTO and FMLA. Generic LLMs leak policies across jurisdictions.
+2. **Outdated Policies**: Companies release yearly amendments (v1.0 → v2.0). LLMs without strict version governance retrieve superseded rules.
+3. **Hallucinations**: Inventing leave balances or insurance limits creates serious compliance and liability risks.
